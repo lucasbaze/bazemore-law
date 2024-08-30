@@ -8,12 +8,6 @@ import { Button } from "./ui/button";
 export default function MainNav() {
   const [state, setState] = React.useState(false);
 
-  const menus = [
-    { title: "Components", path: "/inators" },
-    { title: "Documentation", path: "/docs" },
-    { title: "Feedback", path: "/contact" },
-  ];
-
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <button
@@ -23,40 +17,35 @@ export default function MainNav() {
       >
         <Menu />
       </button>
-      <header className="px-4 py-3 shadow flex justify-between  bg-white">
-        {!state ? (
-          <Link
-            href="/"
-            aria-label="Back to homepage"
-            className=" flex md:justify-center justify-start items-center gap-3"
-          >
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-600 text-white">
-              <Flower2 />
-            </div>
-            <span className="self-center text-2xl font-semibold">
-              Inators UI
-            </span>
-          </Link>
-        ) : null}
-        <div className="flex justify-between">
-          <div className="flex">
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                state ? "block" : "hidden"
-              }`}
-            >
-              <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0 mt-2 ml-5 font-semibold">
-                {menus.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className=" hover:text-rose-600 text-sm"
-                  >
-                    <Link href={item.path}>{item.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      <header className="sm:px-8 md:px-0 py-4 shadow bg-white">
+				<div className="max-w-7xl flex justify-between md:px-16 mx-auto">
+					{!state ? (
+						<Link
+							href="/"
+							aria-label="Back to homepage"
+							className=" flex md:justify-center justify-start items-center gap-3"
+						>
+							<img src="/bazemore-law-logo.jpg" width="200" />
+						</Link>
+					) : null}
+					<div className="flex flex-1 justify-end items-center">
+							<div
+								className={`flex flex-row justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+									state ? "block" : "hidden"
+								}`}
+							>
+								<div className="flex items-center">
+									<div className="flex-shrink-0">
+										(806) 994-2060
+									</div>
+									<div className="flex-shrink-0 px-3 py-2 bg-blue-600 text-white">
+										<a className="text-center" target="_blank" href="https://secure.lawpay.com/pages/bazemore-law-firm-pllc/operating">
+											Pay Invoice
+										</a>
+									</div>
+								</div>
+						</div>
+					</div>
         </div>
       </header>
     </div>
