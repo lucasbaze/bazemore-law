@@ -17,10 +17,13 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Bazemore Law Firm | Elder Law, Trusts, Estates',
+  title: 'Bazemore Law Firm PLLC - Elder Law, Trusts, Estates',
   description:
     'A West Texas Law Firm specializing in trusts, elder law, medicaid, probates & estates',
   keywords: ['Elder Law', 'Probates', 'Estates', 'Trusts', 'Medicaid'],
+  openGraph: {
+    images: ['/seo-image.png'],
+  },
 };
 
 export default function RootLayout({

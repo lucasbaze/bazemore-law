@@ -24,7 +24,7 @@ const MainFooter = () => {
             <p className="font-sans">Bazemore Law Firm PLLC</p>
             <p className="font-sans">4710 67th Street, Suite F</p>
             <p className="font-sans">Lubbock, Texas 79414</p>
-            <p className="font-sans">Phone: (806) 329-4601</p>
+            <p className="font-sans">Phone: (806) 994-2060</p>
             <p className="font-sans mb-4">Fax: (806) 370-3732</p>
             <a
               href="https://maps.google.com"

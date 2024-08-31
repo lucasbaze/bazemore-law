@@ -1,7 +1,12 @@
-import InstallCode from '@/components/installcode';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import Link from 'next/link';
+import {
+  Printer,
+  Building,
+  HomeIcon,
+  Phone,
+  Mail,
+  Paperclip,
+} from 'lucide-react';
 
 const services = [
   {
@@ -26,15 +31,15 @@ const services = [
       'Estate planning is more than just asking, “Where will my stuff go when I die?” More importantly, what happens to your family and responsibilities if you are incapacitated or need long term skilled care?',
   },
   {
-    image: '/windmills.jpg',
-    imageAlt: 'Windmills',
+    image: '/cotton.jpg',
+    imageAlt: 'Cotton Fields',
     title: 'Probate',
     description:
       'Settling the affairs of a loved one is often a tiring and thankless job. And, if you don’t have a Will, the State of Texas decides where your stuff will go. We can help plan to get it right and navigate the court process.',
   },
   {
-    image: '/cotton.jpg',
-    imageAlt: 'Cotton Fields',
+    image: '/windmills.jpg',
+    imageAlt: 'Windmills',
     title: 'Series LLC',
     description:
       'A series LLC is a holding company that can segregate assets under independent series for liability protection without the cost and headache of setting up multiple companies (e.g. rent houses) and is a good solution to segregate trust assets from business assets for protection of future generations.',
@@ -44,34 +49,46 @@ const services = [
 export default function Home() {
   return (
     <main className="">
-      <section className="py-24">
-        <div className="max-w-7xl flex flex-col p-1 md:px-10 mx-auto sm:pt-10 lg:flex-row items-center gap-8">
-          <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
-            <Image
-              src="/bazemore-head-shot.jpg"
-              alt=""
-              height={350}
-              width={350}
-              className="rounded-sm"
-            />
-          </div>
-          <div className="flex-1 flex-col justify-center p-6 text-center rounded-sm lg:text-left leading-snug">
-            <h1 className="text-5xl font-bold leadi leading-snug">
-              Robert Bazemore
-            </h1>
-            <p className="mt-6 mb-8 text-2xl sm:mb-12 leading-snug max-w-2xl">
-              Attorney Robert Bazemore is a life-long entrepreneur with over 30
-              years combined experience in business, healthcare and law.
-            </p>{' '}
-            <div>
-              <Button>Call For Consultation: (806) 994-2060</Button>
+      <section className="mt-20 relative">
+        <div
+          className="relative w-full h-[800px] md:h-[600px] bg-center bg-cover flex items-center"
+          style={{ backgroundImage: "url('/amarillo-skyliune.jpg')" }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-orange-100 opacity-50"></div>
+          {/* Content */}
+          <div className="relative max-w-7xl flex flex-col p-1 md:mt-0 md:px-10 mx-auto sm:pt-10 md:flex-row items-center z-20">
+            <div className="flex items-center justify-center pr-0 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
+              <Image
+                src="/bazemore-head-shot.jpg"
+                alt="Robert Bazemore"
+                height={325}
+                width={325}
+              />
+            </div>
+            <div className="flex-1 flex-col content-center items-center p-6 leading-snug bg-white h-[325px] w-[325px] md:w-full">
+              <h1 className="text-3xl md:text-3xl font-bold leading-snug">
+                Robert Bazemore
+              </h1>
+              <p className="mt-6 mb-8 text-2xl sm:mb-12 leading-snug max-w-2xl">
+                Attorney Robert Bazemore is a life-long entrepreneur with over
+                30 years combined experience in business, healthcare and law.
+              </p>{' '}
+              <div className="">
+                <a
+                  className="text-center px-5 py-3 bg-blue-800 text-white shadow-md"
+                  href="tel:8069942060"
+                >
+                  Call Robert: (806) 994-2060
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="bg-gray-100 py-24">
+      <section className="bg-gray-100 py-20">
         <div className="container mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold mb-2">Our Law Services</h2>
           <p className="text-gray-600 font-sans text-2xl">
@@ -110,13 +127,21 @@ export default function Home() {
             alt="Robert Bazemore, Esq."
             width={300}
             height={200}
-            className="w-1/3 mx-auto h-auto object-cover mb-6"
+            className="w-full md:w-1/3 mx-auto h-auto object-cover mb-6"
           />
         </div>
-        <div className="max-w-2xl mx-auto text-3xl text-center">
+        <div className="max-w-2xl mx-auto text-2xl md:text-3xl text-center mb-12">
           West Texas seniors and their families are a diverse blend of
           good-natured, down-to-earth people that are always willing to offer a
           helping hand to those in their community.
+        </div>
+        <div className="text-center">
+          <a
+            className="text-center px-5 py-3 bg-blue-800 text-white shadow-md"
+            href="tel:8069942060"
+          >
+            Call Robert: (806) 994-2060
+          </a>
         </div>
       </section>
 
@@ -160,31 +185,61 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-8 leading-relaxed text-center">
           Get in Touch
         </h2>
-        <div className="flex">
+        <div className="container flex flex-col md:flex-row">
           {/* <!-- Address and Contact Information --> */}
-          <div className="w-1/3">
+          <div className="w-full md:w-1/3 mb-12">
             <h3 className="font-semibold text-xl mb-4">Contact Us</h3>
             <div className="font-sans mb-8">
-              <p className="mb-2">Bazemore Law Firm PLLC</p>
               <p className="mb-2">
-                4710 67th Street, <br />
-                Suite F Lubbock, Texas 79414
+                <Building className="w-4 inline-block mr-2" />
+                Bazemore Law Firm PLLC
               </p>
-              <p className="mb-2">Office | (806) 329-4601</p>
-              <p className="mb-2">Fax | (806) 370-3732</p>
-              <p className="mb-2">bazemorelaw@gmail.com</p>
+              <p className="mb-2">
+                <Mail className="w-4 inline-block mr-2" />
+                Mailing: P.O. Box 66 <br />
+                <span className="pl-6">Tulia, TX 79088</span>
+              </p>
+              <p className="mb-2">
+                <HomeIcon className="w-4 inline-block mr-2" />
+                Address: First National Bank <br />
+                <span className="pl-6">103 N. Maxwell Ave.</span> <br />
+                <span className="pl-6">Tulia, TX 79088</span>
+              </p>
+              <p className="mb-2">
+                <Phone className="w-4 inline-block mr-2" />
+                <a href="tel:8063294601">Phone: (806) 994-2060</a>
+              </p>
+              <p className="mb-2">
+                <Printer className="w-4 inline-block mr-2" /> Fax: (806)
+                370-3732
+              </p>
+              <p className="mb-2">
+                <Paperclip className="w-4 inline-block mr-2" />
+                <a href="mailto:bazemorelaw@gmail.com">bazemorelaw@gmail.com</a>
+              </p>
             </div>
-            <h3 className="font-semibold text-xl mb-2">Office Hours:</h3>
-            <p className="font-sans">
-              <i>By appointment only</i>
-            </p>
+            <div className="mb-8">
+              <h3 className="font-semibold text-xl mb-2">Office Hours:</h3>
+              <p className="font-sans">
+                <i>By appointment only</i>
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <a
+                className="text-center px-3 py-2 bg-blue-800 text-white shadow-md"
+                target="_blank"
+                href="https://secure.lawpay.com/pages/bazemore-law-firm-pllc/operating"
+              >
+                Pay Invoice
+              </a>
+            </div>
           </div>
-          <div className="w-2/3 container mx-auto text-center">
+          <div className="w-full md:w-2/3 mx-auto text-center">
             {/* <!-- Google Map Embed --> */}
             <div className="flex justify-stretch" style={{ height: '500px' }}>
               <iframe
-                className="w-full lg:max-w-6xl h-full border-0 mx-auto"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.8351475478676!2d-101.93148352436686!3d33.53049063478244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fe0b9dbdd4031f%3A0xb6f594f914f4972e!2s4710%2067th%20St%2C%20Lubbock%2C%20TX%2079414%2C%20USA!5e0!3m2!1sen!2sin!4v1695993333445!5m2!1sen!2sin"
+                className="w-full h-full border-0 mx-auto"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12265.884323571261!2d-101.77488541660193!3d34.53927586389213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x870199e56d8efeed%3A0x43163208bfae4d9!2sFirst%20National%20Bank!5e0!3m2!1sen!2sus!4v1725139973765!5m2!1sen!2sus"
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
