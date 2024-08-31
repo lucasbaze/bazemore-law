@@ -18,21 +18,21 @@ export default function MainNav() {
         <Menu />
       </button>
       <header className="px-4 sm:px-8 md:px-0 py-5 shadow-lg bg-white">
-        <div className="max-w-7xl flex justify-between md:px-16 mx-auto">
-          {!state ? (
-            <div className="flex items-center">
-              <Link
-                href="/"
-                aria-label="Back to homepage"
-                className=" flex md:justify-center justify-start items-center gap-3 mr-12"
-              >
-                <img src="/bazemore-law-logo.jpg" width="180" />
-              </Link>
-              <div className="font-semibold text-lg hidden md:block">
-                A West Texas Law Firm
-              </div>
+        <div
+          className={`max-w-7xl flex justify-between md:px-16 mx-auto ${state ? 'flex-col' : ''}`}
+        >
+          <div className="flex items-center">
+            <Link
+              href="/"
+              aria-label="Back to homepage"
+              className=" flex md:justify-center justify-start items-center gap-3 mr-12"
+            >
+              <img src="/bazemore-law-logo.jpg" width="180" />
+            </Link>
+            <div className="font-semibold text-lg hidden md:block">
+              A West Texas Law Firm
             </div>
-          ) : null}
+          </div>
           <div className="flex flex-1 justify-end items-center">
             <div
               className={`flex flex-row justify-self-center pb-3 mt-16 md:block md:pb-0 md:mt-0 ${
