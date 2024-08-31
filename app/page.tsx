@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Section Separator */}
-      <section className="py-24">
+      <section className="container py-24">
         <div className="w-full">
           <Image
             src="/cowboys.jpg"
