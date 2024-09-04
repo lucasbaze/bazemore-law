@@ -72,7 +72,7 @@ export default function Home() {
               </h1>
               <p className="mt-6 mb-8 text-2xl sm:mb-12 leading-snug max-w-2xl">
                 Attorney Robert Bazemore is a life-long entrepreneur with over
-                30 years combined experience in business, healthcare and law.
+                35 years combined experience in business, healthcare and law.
               </p>{' '}
               <div className="">
                 <a
@@ -168,12 +168,8 @@ export default function Home() {
                 Robert is the founder of Bazemore Law Firm PLLC. He holds a
                 degree in business administration from LeTourneau University and
                 a doctorate degree in law from South Texas College of Law –
-                Houston. He is accredited by the Veterans Administration and is
-                a member of the National Academy of Elder Law Attorneys, Elder
-                Counsel, the State Bar of Texas – Real Estate, Probate & Trust
-                Law Section, Elder Law Answers, and multiple other relevant
-                associations. He was awarded a Presidential Management
-                Fellowship in Washington, D.C. after law school.
+                Houston. He was awarded a Presidential Management Fellowship in
+                Washington, D.C. after law school.
               </p>
             </div>
           </div>

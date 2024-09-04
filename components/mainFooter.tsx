@@ -22,8 +22,9 @@ const MainFooter = () => {
               Our Location
             </h3>
             <p className="font-sans">Bazemore Law Firm PLLC</p>
-            <p className="font-sans">4710 67th Street, Suite F</p>
-            <p className="font-sans">Lubbock, Texas 79414</p>
+            <p className="font-sans">First National Bank</p>
+            <p className="font-sans">103 N. Maxwell Ave.</p>
+            <p className="font-sans">Tulia, TX 79088</p>
             <p className="font-sans">Phone: (806) 994-2060</p>
             <p className="font-sans mb-4">Fax: (806) 370-3732</p>
             <a
@@ -32,13 +33,17 @@ const MainFooter = () => {
             >
               Get Directions
             </a>
-            <a href="/pay-invoice" className="text-white text-lg font-semibold">
+            <a
+              href="https://secure.lawpay.com/pages/bazemore-law-firm-pllc/operating"
+              target="_blank"
+              className="text-white text-lg font-semibold"
+            >
               PAY INVOICE
             </a>
           </div>
 
           {/* <!-- Affiliations and Invoice --> */}
-          <div className="flex flex-col items-center md:items-start">
+          {/* <div className="flex flex-col items-center md:items-start">
             <h3 className="text-lg font-semibold uppercase mb-2">
               Affiliations
             </h3>
@@ -48,7 +53,7 @@ const MainFooter = () => {
               alt="Elder Law Answers"
               className="mt-4 mb-4 w-24 md:w-28"
             />
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>
